@@ -53,10 +53,10 @@ function onListening() {
     var addr = server.address();
 
     if (typeof addr === 'string') {
-        console.log('Listening on pipe ' + addr);
+        console.log('Listening on pipe http://' + addr);
     } else {
         fileShare.addresses.forEach(function (address) {
-            console.log('Listening on ' + address + ':' + addr.port);
+            console.log('Listening on http://' + address + ':' + addr.port);
         });
     }
 }
